@@ -10,7 +10,7 @@
         %li{class: ('active' if current_admin_path.start_with?('/pages') || current_admin_path.start_with?('/navigations'))}
           = link_to t('spina.website.pages'), spina.admin_pages_path
         %li
-          = link_to 'Manage blog', '/posts'
+          = link_to 'Manage Blog', '/posts'
         %li{class: ('active' if current_admin_path.start_with?('/photos', '/attachments'))}
           = link_to t('spina.website.media_library'), spina.admin_photos_path
         - Spina::Plugin.all.each do |plugin|
