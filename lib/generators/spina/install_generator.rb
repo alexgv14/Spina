@@ -70,7 +70,7 @@ module Spina
       password = 'password'
       password = ask("Create a temporary password: [#{password}]").presence || password
       @temporary_password = password
-      User.create name: 'admin', email: email, password: password, admin: true
+      Spina::User.create name: 'admin', email: email, password: password, admin: true
     end
 
     def bootstrap_spina
