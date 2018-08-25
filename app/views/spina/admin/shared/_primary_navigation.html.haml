@@ -11,6 +11,8 @@
           = link_to t('spina.website.pages'), spina.admin_pages_path
         %li
           = link_to 'Manage blog', '/posts'
+        %li
+          = link_to 'Manage users', '/manage_users/show'
         %li{class: ('active' if current_admin_path.start_with?('/photos', '/attachments'))}
           = link_to t('spina.website.media_library'), spina.admin_photos_path
         - Spina::Plugin.all.each do |plugin|
